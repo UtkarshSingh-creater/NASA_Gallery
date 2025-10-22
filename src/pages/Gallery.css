@@ -1,0 +1,51 @@
+.gallery-container {
+    width: 100%; 
+    padding: 0 20px;
+    box-sizing: border-box;
+}
+.gallery-title {
+    text-align: center;
+    color: #041f4d;
+    margin: 40px 0 20px 0;
+    font-weight: 600;
+}
+.image-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    padding: 20px 0;
+    width: 100%; 
+}
+.pagination-controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    margin: 40px 0;
+}
+.pagination-button {
+    background-color: #041f4d;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 1rem;
+    transition: background-color 0.3s;
+}
+.pagination-button:hover:not(:disabled) {
+    background-color: #052c6f;
+}
+.pagination-button:disabled {
+    background-color: #ccc;
+    cursor: not-allowed;
+}
+.pagination-info {
+    font-weight: 500;
+    color: #333;
+}
+@media (max-width: 600px) {
+    .image-grid {
+        grid-template-columns: 1fr;
+    }
+}
